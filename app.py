@@ -1,13 +1,8 @@
 from flask import Flask, request, jsonify, make_response
 from flask_migrate import Migrate
 from models import db, Exercise, Workout, WorkoutExercise
-from schemas import (
-    ExerciseSchema,
-    WorkoutSchema,
-    WorkoutExerciseSchema,
-    WorkoutWithExercisesSchema,
-    ExerciseWithWorkoutsSchema
-)
+from schemas import (ExerciseSchema,WorkoutSchema,WorkoutExerciseSchema,WorkoutWithExercisesSchema,ExerciseWithWorkoutsSchema)
+# import requests
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
